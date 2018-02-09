@@ -24,6 +24,9 @@ public class Book {
         return Objects.equals(id, book.id);
     }
 
+    public Book() {
+    }
+
     @Override
     public String toString() {
         return "Book{" +
