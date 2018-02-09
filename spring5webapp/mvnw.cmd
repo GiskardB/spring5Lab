@@ -35,8 +35,6 @@
 
 
 
-set MAVEN_OPTS=-Dhttps.proxyHost=10.64.7.254 -Dhttps.proxyPort=800
-
 @REM Begin all REM lines with '@' in case MAVEN_BATCH_ECHO is 'on'
 @echo off
 @REM enable echoing my setting MAVEN_BATCH_ECHO to 'on'
