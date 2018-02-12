@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>guru.springframework</groupId>
-	<artifactId>spring5webapp</artifactId>
+	<artifactId>di-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>${project.packaging}</packaging>
+	<packaging>jar</packaging>
 
-	<name>spring5webapp</name>
-	<description>Demo project for Spring Boot</description>
+	<name>di-demo</name>
+	<description>Demo od DI for Spring</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -27,26 +27,9 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -63,56 +46,7 @@
 		</plugins>
 	</build>
 
-	<profiles>
-		<profile>
-			<id>dev</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<project.packaging>jar</project.packaging>
-			</properties>
-		</profile>
-
-		<profile>
-			<id>release</id>
-			<properties>
-				<project.packaging>war</project.packaging>
-			</properties>
-			<dependencies>
-				<dependency>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-web</artifactId>
-					<exclusions>
-						<exclusion>
-							<artifactId>spring-boot-starter-tomcat</artifactId>
-							<groupId>org.springframework.boot</groupId>
-						</exclusion>
-					</exclusions>
-				</dependency>
-				<dependency>
-					<groupId>javax.servlet</groupId>
-					<artifactId>javax.servlet-api</artifactId>
-					<version>3.1.0</version>
-					<scope>provided</scope>
-				</dependency>
-			</dependencies>
-		</profile>
-
-	</profiles>
-
-
 	<repositories>
-		<repository>
-			<id>central</id>
-			<name>Releases</name>
-			<url>http://mercurial.objectway.it/artifactory/libs-release-local</url>
-		</repository>
-		<repository>
-			<id>snapshots</id>
-			<name>Snapshots</name>
-			<url>http://mercurial.objectway.it/artifactory/libs-snapshot-local</url>
-		</repository>
 		<repository>
 			<id>spring-snapshots</id>
 			<name>Spring Snapshots</name>
