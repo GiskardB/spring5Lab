@@ -13,7 +13,7 @@ public class JokesController {
     @Autowired
     private ChuckNorrisQuotes quotesService;
 
-    @RequestMapping("/")
+    @RequestMapping({"/",""})
     public String getQuote(Model model){
         model.addAttribute("joke", quotesService.getRandomQuote());
         return "chucknorris";
