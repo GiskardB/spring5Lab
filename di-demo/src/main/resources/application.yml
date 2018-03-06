@@ -1,0 +1,13 @@
+guru:
+    jms:
+      user: userjmsfromYml
+      password: pwdjms
+      dburl: urljms
+
+---  #Separator of files
+spring:
+    profiles: de
+
+guru:
+    jms:
+      user: userjmsfromYmlInGerman
