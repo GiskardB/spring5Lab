@@ -18,6 +18,12 @@ public class Ingredient {
     @OneToOne(fetch = FetchType.EAGER) //it s default but can specify the behavoiur
     private UnitOfMeasure measure;
 
+    public Ingredient(String description, BigDecimal amount,  UnitOfMeasure measure) {
+        this.description = description;
+        this.amount = amount;
+        this.measure = measure;
+    }
+
     public UnitOfMeasure getMeasure() {
         return measure;
     }

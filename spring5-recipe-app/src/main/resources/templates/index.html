@@ -5,6 +5,18 @@
     <title>Recip spring5 Example</title>
 </head>
 <body>
-Recip test
+Recipes test
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+    </tr>
+    <tr th:each="recipe : ${recipes}">
+        <td th:text="${recipe.id}"></td>
+        <td th:text="${recipe.description}">Description</td>
+    </tr>
+</table>
+
 </body>
 </html>
