@@ -15,8 +15,11 @@ import java.util.Set;
 public class RecipeServiceImpl implements RecipeService {
 
 
-    @Autowired
     private RecipeRepository recipeRepository;
+
+    public RecipeServiceImpl(RecipeRepository recipeRepository) {
+        this.recipeRepository = recipeRepository;
+    }
 
     @Override
     public Set<Recipe> getRecipes() {
