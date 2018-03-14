@@ -35,7 +35,7 @@ public class CurrencyConversionController {
     @GetMapping("/currency-converter-feign/from/{from}/to/{to}/quantity/{quantity}")
     public CurrencyConversionBean convertCurrencyFeign(@PathVariable String from, @PathVariable String to, @PathVariable BigDecimal quantity) {
 
-
+        //Feign send to ribbon that choose with load balancer in the properties where put data
         CurrencyConversionBean response = currencyExchangeServiceProxy.retrieveExchangeValue(from, to);
 
 
