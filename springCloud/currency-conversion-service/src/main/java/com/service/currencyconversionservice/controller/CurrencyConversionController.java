@@ -2,6 +2,8 @@ package com.service.currencyconversionservice.controller;
 
 import com.service.currencyconversionservice.proxy.CurrencyExchangeServiceProxy;
 import com.service.currencyconversionservice.bean.CurrencyConversionBean;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +16,7 @@ import java.math.BigDecimal;
 @RestController
 public class CurrencyConversionController {
 
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     CurrencyExchangeServiceProxy currencyExchangeServiceProxy;
@@ -38,7 +41,7 @@ public class CurrencyConversionController {
         //Feign send to ribbon that choose with load balancer in the properties where put data
         CurrencyConversionBean response = currencyExchangeServiceProxy.retrieveExchangeValue(from, to);
 
-
+        logger.info("{}", response);
         return response;
 
     }
