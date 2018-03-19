@@ -1,0 +1,1 @@
+java -jar zipkin-server-2.6.0-exec.jar RABBIT_URI=amqp://locahost
