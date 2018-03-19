@@ -16,8 +16,6 @@ public class NetflixZuulApiGatewayServerApplication {
 		SpringApplication.run(NetflixZuulApiGatewayServerApplication.class, args);
 	}
 
-
-
 	@Bean
 	public AlwaysSampler defaultSampler() {
 		return new AlwaysSampler();
